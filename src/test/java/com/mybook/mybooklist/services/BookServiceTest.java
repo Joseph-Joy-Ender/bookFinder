@@ -1,10 +1,8 @@
 package com.mybook.mybooklist.services;
 
 import com.mybook.mybooklist.data.model.Book;
-import com.mybook.mybooklist.data.repositories.BookRepository;
 import com.mybook.mybooklist.exceptions.BookNotFound;
 import lombok.extern.slf4j.Slf4j;
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -21,13 +19,6 @@ public class BookServiceTest {
     @Autowired
     private BookService bookService;
 
-    @Autowired
-    private BookRepository repository;
-//
-//    @AfterEach
-//    public void deleteAfterEach(){
-//        repository.deleteAll();
-//    }
 
     @Test
     public void testThatBookCanBeSearchedFor() throws BookNotFound {
